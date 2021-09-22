@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 export default makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
-      margin: '1%',
+      margin: '2% 7%',
     },
   },
   paper: {
