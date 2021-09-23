@@ -10,7 +10,7 @@ export const getPosts = () => async (dispatch) => {
     payload: data,
   });
   } catch (error) {
-    console.log(error.message)
+    console.log(error)
   }
   
 }
@@ -23,7 +23,18 @@ export const createPost = (newPost) => async (dispatch) => {
     payload: data,
   });
   } catch (error) {
-    console.log(error.message)
+    console.log(error)
   }
-  
+}
+
+export const updatePost = (id, updatedPost) => async (dispatch) => {
+  try {
+    const { data } = await api.updatePost(id, updatedPost);
+    dispatch({
+    type: 'UPDATE',
+    payload: data,
+  });
+  } catch (error) {
+    console.log(error)
+  }
 }
