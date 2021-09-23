@@ -15,6 +15,10 @@ app.use(cors());
 
 app.use('/posts', postsRoutes); //This adds the prefix posts to all the routes handled in postRoutes
 
+app.get('/', (req, res) => {
+  res.send('Welcome to Tucu Gomez MERN practice social app')
+})
+
 const PORT = process.env.PORT || 5001;
 
 
