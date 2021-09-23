@@ -19,8 +19,6 @@ const Form = ({ currentId, setCurrentId }) => {
   
   useEffect(() => {
     if(postToUpdate) setPostData(postToUpdate);
-    return () => {
-    }
   }, [postToUpdate])
 
   const handleSubmit = (e) => {

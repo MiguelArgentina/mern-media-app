@@ -10,15 +10,15 @@ import { getPosts } from './actions/posts';
 
 const App = () => {
   const [currentId, setCurrentId] = useState(null);
+  const [likeOrDeleted, setLikeOrDeleted] = useState(false);
   const classes = useStyles();
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getPosts());
-    return () => {
-      
-    }
-  }, [currentId, dispatch])
+
+    
+  }, [currentId, dispatch, likeOrDeleted])
 
   return ( 
     <Container maxWidth="lg">
@@ -30,7 +30,7 @@ const App = () => {
         <Container>
           <Grid container justify="space-between" alignItems="stretch" spacing={4}>
             <Grid item xs={12} sm={7}>
-              <Posts setCurrentId={setCurrentId} />
+              <Posts setCurrentId={setCurrentId} setLikeOrDeleted={setLikeOrDeleted} likeOrDeleted={likeOrDeleted} />
             </Grid>
              <Grid item xs={12} sm={4}>
                <Form currentId={currentId} setCurrentId={setCurrentId} />
