@@ -28,7 +28,7 @@ const App = () => {
       </AppBar>
       <Grow in>
         <Container>
-          <Grid container justify="space-between" alignItems="stretch" spacing={4}>
+          <Grid container justifyContent="space-between" alignItems="stretch" spacing={4}>
              <Grid item xs={12} sm={4}>
                <Form currentId={currentId} setCurrentId={setCurrentId} />
             </Grid>
